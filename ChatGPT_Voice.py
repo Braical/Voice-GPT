@@ -12,7 +12,6 @@ import gpt_config
 import pyperclip
 import pygame
 import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 import pygame
 
 # Modificamos una clase en Undetected Chromedriver para que no se cierre el chrome al terminar el programa

@@ -1,7 +1,7 @@
-selenium==3.141.0
-undetected-chromedriver==3.0.3
-speechrecognition==3.8.1
-pyaudio==0.2.11
-gtts==2.2.3
-pygame==2.0.1
-pyperclip==1.8.2
+selenium
+undetected-chromedriver
+speechrecognition
+pyaudio
+gtts
+pygame
+pyperclip

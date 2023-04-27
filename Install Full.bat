@@ -7,14 +7,14 @@ python --version > NUL 2>&1
 if %errorlevel% neq 0 (
     echo Python no encontrado.
     :InstallPythonPrompt
-    set /p installPython="Desea instalar Python %desired_version%? (S/N): "
-    if /i "%installPython%" EQU "S" (
+    set /p installPython="Desea instalar Python %desired_version%? (s/n): "
+    if /i "%installPython%" EQU "s" (
         goto InstallPython
-    ) else if /i "%installPython%" EQU "N" (
+    ) else if /i "%installPython%" EQU "n" (
         echo Instalacion de Python cancelada.
         goto End
     ) else (
-        echo Por favor ingrese 'S' o 'N'.
+        echo Por favor ingrese 's' o 'n'.
         goto InstallPythonPrompt
     )
 ) else (
@@ -26,8 +26,8 @@ if %errorlevel% neq 0 (
 )
 
 :UpdatePip
-set /p updatePip="Desea actualizar pip? (S/N): "
-if /i "%updatePip%" EQU "S" (
+set /p updatePip="Desea actualizar pip? (s/n): "
+if /i "%updatePip%" EQU "s" (
     echo Actualizando pip...
     python -m pip install --upgrade pip
     if %errorlevel% neq 0 (
@@ -35,15 +35,15 @@ if /i "%updatePip%" EQU "S" (
         pause
         exit /b 1
     )
-) else if /i "%updatePip%" EQU "N" (
+) else if /i "%updatePip%" EQU "n" (
     echo Actualizacion de pip cancelada.
 ) else (
-    echo Por favor ingrese 'S' o 'N'.
+    echo Por favor ingrese 's' o 'n'.
     goto UpdatePip
 )
 
 echo Instalando dependencias...
-set /p installDeps="Desea instalar las dependencias del proyecto? (S/N): "
+set /p installDeps="Desea instalar las dependencias del proyecto? (s/n): "
 if /i "%installDeps%" EQU "S" (
     python -m pip install -r requirements.txt
     if %errorlevel% neq 0 (
@@ -51,10 +51,10 @@ if /i "%installDeps%" EQU "S" (
         pause
         exit /b 1
     )
-) else if /i "%installDeps%" EQU "N" (
+) else if /i "%installDeps%" EQU "s" (
     echo Instalacion de dependencias cancelada.
 ) else (
-    echo Por favor ingrese 'S' o 'N'.
+    echo Por favor ingrese 's' o 'n'.
     goto InstallDependencies
 )
 

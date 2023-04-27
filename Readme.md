@@ -1,12 +1,12 @@
 # ChatGPT Voice Assistant
 
 Este programa permite interactuar con el modelo de lenguaje ChatGPT de OpenAI mediante voz. El usuario puede hablar al micrófono y recibir respuestas de ChatGPT en formato de audio.
-El programa hace webscraping del sitio https://chat.openai.com/, por lo que abre una instancia de Chrome, dejar abierta mientras se usa.
+El programa hace webscraping del sitio https://chat.openai.com/, por lo que abre una instancia de Chrome (El usuario debe tenerlo instalado, no está en el archivo requeriments.txt), dejar abierta mientras se usa.
 Por ahora, solamente soporta Windows.
 
 ## Preparación
 
-1. Ejecuta `install.bat` haciendo doble clic en él. Esto instalará Python (si es necesario) y las dependencias del programa.
+1. Para instalar el programa, tiene dos opciones, una es "Install Full.bat" que instala python, pip y las dependencias necesarias. Luego hay otro archivo "Install requirements.bat" que sólo instala las dependencias.
 
 2. Modifica el archivo `gpt_config.py` con un editor de texto (por ejemplo, Bloc de notas) y reemplaza los campos "your_username" y "your_password" con tu nombre de usuario (correo electrónico) y contraseña de ChatGPT.
 
