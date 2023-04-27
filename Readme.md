@@ -6,8 +6,13 @@ Por ahora, solamente soporta Windows.
 
 ## Preparación
 
-1. Para instalar el programa, se proporcionan 3 archivos, uno para instalar Python, otro para actualizar pip, y otro para instalar sólo las dependencias requeridas por el programa.
-Se recomienda tener instalado python y pip funcionando previamente e instalar sóla los requerimientos.
+1. Para instalar el programa, se proporcionan 3 archivos, uno para instalar Python ("Install Python.bat"), otro para actualizar pip ("Update PIP.bat"), y otro para instalar sólo las dependencias requeridas por el programa ("Install Requirements"). 
+Se recomienda tener instalado python y pip funcionando previamente e instalar sólo los requerimientos.
+En caso de no tener instalado Python, el orden correcto sería:
+a. Install Python.bat
+b. Update PIP.bat
+c. Install Requirements.bat
+
 
 2. Modifica el archivo `GPT_config.py` con un editor de texto (por ejemplo, Bloc de notas) y reemplaza los campos "your_username" y "your_password" con tu nombre de usuario (correo electrónico) y contraseña de ChatGPT.
 
