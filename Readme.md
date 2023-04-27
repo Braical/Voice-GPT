@@ -2,6 +2,7 @@
 
 Este programa permite interactuar con el modelo de lenguaje ChatGPT de OpenAI mediante voz. El usuario puede hablar al micrófono y recibir respuestas de ChatGPT en formato de audio.
 El programa hace webscraping del sitio https://chat.openai.com/, por lo que abre una instancia de Chrome, dejar abierta mientras se usa.
+Por ahora, solamente soporta Windows.
 
 ## Preparación
 

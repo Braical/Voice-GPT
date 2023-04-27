@@ -11,8 +11,6 @@ from gtts import gTTS
 import gpt_config
 import pyperclip
 import pygame
-import threading
-import sys
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 import pygame
@@ -21,6 +19,11 @@ import pygame
 class My_Chrome(uc.Chrome):
     def __del__(self):
         pass
+
+# Crear la carpeta 'Audio' si no existe
+audio_folder = "Audio"
+if not os.path.exists(audio_folder):
+    os.makedirs(audio_folder)
 
 website = 'https://chat.openai.com'
 options = uc.ChromeOptions() 
@@ -43,7 +46,7 @@ password = gpt_config.password
 
 def text_to_speech(text):
     tts = gTTS(text=text, lang="en")
-    temp_filename = "C:/Users/Brian/OneDrive/Documentos/Python/BOT_GPT/Audio/temp_response.mp3"
+    temp_filename = os.path.join("Audio", "temp_response.mp3")
     tts.save(temp_filename)
     play_audio(temp_filename)
 
@@ -97,7 +100,7 @@ def wait_for_input():
 def solicitud():
     # Ingreso del mensaje, solicita al usuario que hable y lo graba en un archivo
     print("Send a Message")
-    audio_filename = "C:/Users/Brian/OneDrive/Documentos/Python/BOT_GPT/Audio/temp_input.wav"
+    audio_filename = os.path.join("Audio", "temp_input.wav")
     user_text = False
     recognized = False
     attempts = 0
