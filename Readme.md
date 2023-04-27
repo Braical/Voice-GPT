@@ -7,13 +7,13 @@ Por ahora, solamente soporta Windows.
 ## Preparación
 
 1. Para instalar el programa, se proporcionan 3 archivos, uno para instalar Python, otro para actualizar pip, y otro para instalar sólo las dependencias requeridas por el programa.
-Se recomienda tener instalado python y pip funcionando previamente.
+Se recomienda tener instalado python y pip funcionando previamente e instalar sóla los requerimientos.
 
-2. Modifica el archivo `gpt_config.py` con un editor de texto (por ejemplo, Bloc de notas) y reemplaza los campos "your_username" y "your_password" con tu nombre de usuario (correo electrónico) y contraseña de ChatGPT.
+2. Modifica el archivo `GPT_config.py` con un editor de texto (por ejemplo, Bloc de notas) y reemplaza los campos "your_username" y "your_password" con tu nombre de usuario (correo electrónico) y contraseña de ChatGPT.
 
 ## Ejecución
 
-Ejecuta `run_main.bat` haciendo doble clic en él para iniciar el programa principal. Una vez que el programa esté en ejecución, podrás hablar al micrófono y recibir respuestas de ChatGPT en formato de audio.
+Ejecuta `Run Voice GPT.bat` haciendo doble clic en él para iniciar el programa principal. Una vez que el programa esté en ejecución, podrás hablar al micrófono y recibir respuestas de ChatGPT en formato de audio.
 
 ## Funcionamiento del programa
 
