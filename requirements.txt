@@ -1,7 +1,0 @@
-selenium
-undetected-chromedriver
-speechrecognition
-pyaudio
-gtts
-pygame
-pyperclip
