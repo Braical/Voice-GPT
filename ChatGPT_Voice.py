@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import StaleElementReferenceException
 import time
 import undetected_chromedriver as uc
 import speech_recognition as sr
@@ -127,7 +128,15 @@ def respuesta():
     try:
         WebDriverWait(driver, timeout=15).until(EC.presence_of_element_located((By.XPATH,f'(//button[contains(@class,"flex ml-auto")])[{button_index}]')))
         WebDriverWait(driver, timeout=15).until(EC.element_to_be_clickable((By.XPATH,f'(//button[contains(@class,"flex ml-auto")])[{button_index}]')))
-        driver.find_element(By.XPATH,f'(//button[contains(@class,"flex ml-auto")])[{button_index}]').click()
+        for _ in range(3):  # Intenta hasta 3 veces
+            try:
+                driver.find_element(By.XPATH,f'(//button[contains(@class,"flex ml-auto")])[{button_index}]').click()
+                break
+            except StaleElementReferenceException:
+                pass
+        else:
+            raise Exception("No se pudo hacer clic en el botón después de 3 intentos")
+        
         time.sleep(1)
         response = pyperclip.paste()
     except Exception as e:
