@@ -5,7 +5,7 @@ El programa hace webscraping del sitio https://chat.openai.com/, por lo que abre
 
 ## Preparación
 
-1. Ejecuta `install_python_and_requirements.bat` haciendo doble clic en él. Esto instalará Python (si es necesario) y las dependencias del programa.
+1. Ejecuta `install.bat` haciendo doble clic en él. Esto instalará Python (si es necesario) y las dependencias del programa.
 
 2. Modifica el archivo `gpt_config.py` con un editor de texto (por ejemplo, Bloc de notas) y reemplaza los campos "your_username" y "your_password" con tu nombre de usuario (correo electrónico) y contraseña de ChatGPT.
 
