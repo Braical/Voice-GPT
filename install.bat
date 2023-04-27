@@ -41,4 +41,4 @@ python -m pip install -r requirements.txt
 
 echo.
 echo Instalacion completada. Presione cualquier tecla para salir.
-pause >nul
+pause 
